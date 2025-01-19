@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement; // シーンをリセットするために必要
+
 
 public class GameManager : MonoBehaviour
 {
@@ -48,5 +50,13 @@ public class GameManager : MonoBehaviour
             judgeText.text = "あなたの負け";
         }
     }    
+
+    /// <summary>
+    /// リセットボタンを押すと初期状態に戻る
+    /// </summary>
+    public void ResetScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }  
 
 }
